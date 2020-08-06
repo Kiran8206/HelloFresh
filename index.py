@@ -5,9 +5,7 @@ from pyspark.sql import SparkSession
 
 # Creation of Spark Session object and initial Dataframe
 spark = SparkSession.builder.getOrCreate()
-df = spark.read.format("Json") \
-  .option("inferSchema", "true") \
-  .load("recipes.json")
+df = spark.read.format("Json").option("inferSchema", "true").load("recipes.json")
 
 # UDF to convert time strings to minutes
 def toMin(stg):
