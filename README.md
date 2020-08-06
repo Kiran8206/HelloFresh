@@ -2,11 +2,10 @@
 Cleaning the recipe data of HelloFresh and Classifying them into Easy, Medium and Hard recipes and some aggregations on the classified data
 
 PROBLEM STATEMENT
+Read the data file and find out the average of the total time taken to prepare all the dishes for each difficulty level.
 
-	Read the data file and find out the average of the total time taken to prepare all the dishes for each difficulty level.
-
-	The input file (recipes.json) containing details of different recipes.
-	The schema looks like:
+The input file (recipes.json) containing details of different recipes.
+The schema looks like:
 	  root
 	   |-- cookTime: string (nullable = true)
 	   |-- datePublished: string (nullable = true)
