@@ -28,6 +28,7 @@ The classification is done based on the below conditions.
   hard   : if it is not medium and total time taken is more than 60 mins
 
 SOLUTION
+
 Used Spark-SQL and Created a Pyspark Script which performs 
 
 1) Data cleaning activities like removing the prefix 'PT' from the columns cookTime and prepTime and extracting the total minutes from the resulting time strings (1H15M, 8H, 30M, etc.,)
