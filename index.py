@@ -40,6 +40,6 @@ add_udf = F.udf(lambda x,y : x+y, IntegerType())
 # Transformation to add difficultyLevel and TotalTime Columns
 df2 = df1.withColumn("TotalTime",add_udf("cookTime", "prepTime")).withColumn("difficultyLevel", dlevel_udf("cookTime", "prepTime"))
 
-# Average calculation for each Level
+# Average calculation for each Level and storing the output persistently on disk in Parquet format 
 df2.groupBy("difficultyLevel").agg(F.mean("TotalTime")).write.parquet("/output/result.parquet")
 
